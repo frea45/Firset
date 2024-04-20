@@ -1,7 +1,7 @@
 from pyrogram import client , filters
 from pyrogram.types import Message 
 
-API_ID = 3335796
+API_ID = "3335796"
 API_HASH = "138b992a0e672e8346d8439c3f42ea78"
 
 
