@@ -13,7 +13,7 @@ API_HASH,
 BOT_TOKEN= "5088657122:AAELk-O6R8rYxzqXNvWWRhtl2O0-FNLwHS0")
 
 
-@AHBot.on_message(filters.command(["reset"]) & filters.private)
+@app.on_message(filters.command(["reset"]) & filters.private)
 async def reset(bot, update):
         await db.delete_user(update.from_user.id)
         await db.add_user(update.from_user.id)
