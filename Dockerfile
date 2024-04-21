@@ -6,6 +6,7 @@ COPY requirements.txt /app/
 RUN apt update && apt upgrade -y
  
 RUN pip3 install -U pip
+RUN pip3 install pyrogram
 
 RUN pip3 install -r requirements.txt
 
