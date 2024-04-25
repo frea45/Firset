@@ -1,5 +1,7 @@
 from pyrogram import Client, filters
 import logging
+import config
+import API_ID, API_HASH, BOT_TOKEN 
 from pyrogram.handlers import MessageHandler
 from pyrogram.errors import BadRequest, Forbidden, ...
 
