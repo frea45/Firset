@@ -16,11 +16,13 @@ app = Client("uploader",api_id=api_id, api_hash=api_hash, bot_token=bot_token )
 @app.on_message(filters.text & filters.private)
 async def echo(client, message):
     await message.reply(message.text)
+logging.info('startter')
 
-logging.basicConfig(
-format = '%(asctime)s – %(name)s – %(levelname)s – %(message)s', 
-level = logging.INFO
-)
+
+#logging.basicConfig(
+#format = '%(asctime)s – %(name)s – %(levelname)s – %(message)s', 
+#level = logging.INFO
+#)
 LOGGER = logging.getLoggor(__name__)
 
 
