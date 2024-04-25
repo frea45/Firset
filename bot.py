@@ -3,7 +3,7 @@ import logging
 import config
 import API_ID, API_HASH, BOT_TOKEN 
 from pyrogram.handlers import MessageHandler
-from pyrogram.errors import BadRequest, Forbidden, ...
+#from pyrogram.errors import BadRequest, Forbidden, ...
 
 api_id = 3335796
 api_hash = "138b992a0e672e8346d8439c3f42ea78"
