@@ -23,7 +23,7 @@ logging.info('startter')
 #format = '%(asctime)s – %(name)s – %(levelname)s – %(message)s', 
 #level = logging.INFO
 #)
-LOGGER = logging.getLoggor(__name__)
+#LOGGER = logging.getLoggor(__name__)
 
 
 app.run()
