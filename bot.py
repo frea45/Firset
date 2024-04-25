@@ -1,4 +1,4 @@
-from pyrogram import Client 
+from pyrogram import Client, filters
 import logging
 from pyrogram.handlers import MessageHandler
 from pyrogram.errors import BadRequest, Forbidden, ...
@@ -10,6 +10,10 @@ bot_token = "5088657122:AAELk-O6R8rYxzqXNvWWRhtl2O0-FNLwHS0"
 
 app = Client("uploader",api_id=api_id, api_hash=api_hash, bot_token=bot_token )
 
+
+@app.on_message(filters.text & filters.private)
+async def echo(client, message):
+    await message.reply(message.text)
 
 logging.basicConfig(
 format = '%(asctime)s – %(name)s – %(levelname)s – %(message)s', 
