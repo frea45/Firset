@@ -16,7 +16,14 @@ app = Client("uploader",api_id=api_id, api_hash=api_hash, bot_token=bot_token )
 @app.on_message(filters.text & filters.private)
 async def echo(client, message):
   #  await message.reply(message.text)
-     message.reply("Hello")
+    if message.text :
+      if message.text == '/start':
+      app.send_message(
+        message.chat_id, 'Hiii'
+        reply_to_message_id=message.id 
+        
+   elif message.photo :
+     pass 
 logging.info('startter')
 
 
