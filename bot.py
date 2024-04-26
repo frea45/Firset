@@ -20,11 +20,12 @@ app = Client("uploader",api_id=api_id, api_hash=api_hash, bot_token=bot_token )
   #  await message.reply(message.text)
     
 
-@app.on_message(filters.private & filters.command("help"))
-async def clear_user_batch(Client, Message):
-   # MediaList[f"{str(m.from_user.id)}"] = []
-    await m.reply_text("Cleared your batch files successfully!")
-logging.info('startter')
+f = filters.command("start")
+
+@app.on_message(f)
+@app.on_edited_message(f)
+async def new_and_edited(c, m):
+    print("new and edited")
 
 
 #logging.basicConfig(
