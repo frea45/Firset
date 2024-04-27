@@ -1,20 +1,11 @@
 from pyrogram import Client, filters
-import logging
+#import logging
 import config
 import os
 import traceback
 #import API_ID, API_HASH, BOT_TOKEN 
 from pyrogram.handlers import MessageHandler
-const express = require('express')
-const app = express()
-const port = process.env.PORT || 4000;
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
 #from pyrogram.errors import BadRequest, Forbidden, ...
 
 #api_id = 3335796
