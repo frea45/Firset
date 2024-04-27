@@ -21,14 +21,6 @@ from pyrogram.handlers import MessageHandler
   #  await message.reply(message.text)
     
 
-bot = Client(
-"test",
-api_id = 3335796,
-api_hash = "138b992a0e672e8346d8439c3f42ea78",
-bot_token = "5088657122:AAELk-O6R8rYxzqXNvWWRhtl2O0-FNLwHS0",
-bun_version = "1.1.0"  
-)
-
 @bot.on.message(filters.command('start') & filters.private )
 def command(bot, message):
 bot.send.message(message.chat.id, "Hello Baby")
