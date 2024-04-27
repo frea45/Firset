@@ -7,12 +7,12 @@ import traceback
 from pyrogram.handlers import MessageHandler
 #from pyrogram.errors import BadRequest, Forbidden, ...
 
-api_id = 3335796
-api_hash = "138b992a0e672e8346d8439c3f42ea78"
-bot_token = "5088657122:AAELk-O6R8rYxzqXNvWWRhtl2O0-FNLwHS0"
+#api_id = 3335796
+#api_hash = "138b992a0e672e8346d8439c3f42ea78"
+#bot_token = "5088657122:AAELk-O6R8rYxzqXNvWWRhtl2O0-FNLwHS0"
 
 
-app = Client("uploader",api_id=api_id, api_hash=api_hash, bot_token=bot_token )
+#app = Client("uploader",api_id=api_id, api_hash=api_hash, bot_token=bot_token )
 
 
 #@app.on_message(filters.text & filters.private)
@@ -20,12 +20,19 @@ app = Client("uploader",api_id=api_id, api_hash=api_hash, bot_token=bot_token )
   #  await message.reply(message.text)
     
 
-f = filters.command("start")
+bot = Client(
+"test",
+api_id = 3335796,
+api_hash = "138b992a0e672e8346d8439c3f42ea78",
+bot_token = "5088657122:AAELk-O6R8rYxzqXNvWWRhtl2O0-FNLwHS0"
+)
 
-@app.on_message(f)
-@app.on_edited_message(f)
-async def new_and_edited(c, m):
-    print("new and edited")
+@bot.on.message(filters.command('start') & filters.private )
+def command(bot, message):
+bot.send.message(message.chat.id, "Hello Baby")
+
+print ("i am online")
+bot.run()
 
 
 #logging.basicConfig(
