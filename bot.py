@@ -28,9 +28,9 @@ print ("i am testing")
 #GROUP = "test"
 #WELCOME_MESSAGE = "Hello welcome"
 
-@bot.on_message(filters.chat(GROUP) & filters.new_members)
+@bot.on_message(filters.chat(Config.GROUP) & filters.new_members)
 def welcome(client, message):
-message.reply_text(WELCOME_MESSAGE)
+message.reply_text(Config.WELCOME_MESSAGE)
 print ("i am testing group")
 
 bot.run()
