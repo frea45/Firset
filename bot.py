@@ -23,7 +23,7 @@ bot_token = bot_token
 #GROUP = "test"
 #WELCOME_MESSAGE = "Hello welcome"
 @fars.on_message(filters.command("start"))
- await def welcome(client, message):
+  def welcome(client, message):
 message.reply_text(Config.IMDB_TEMPLATE_TXT)
 print ("i am testing group")
 
