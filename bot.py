@@ -1,7 +1,7 @@
 form pyrogram import Client, __version__ , filters
 from pyrogram.raw.all import layerfilters
 import config
-import sc.py
+from SCRIPT import script 
 import os
 import logging 
 LOGGER = logging.getLoggor(__name__)
