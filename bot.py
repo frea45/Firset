@@ -1,5 +1,6 @@
 form pyrogram import Client, filters
 import config
+import sc.py
 import os
 import logging 
 LOGGER = logging.getLoggor(__name__)
@@ -17,6 +18,14 @@ api_hash = api_hash,
 bot_token = bot_token
 )
 
+
+#GROUP = "test"
+#WELCOME_MESSAGE = "Hello welcome"
+
+
+def welcome(client, message):
+message.reply_text(Config.IMDB_TEMPLATE_TXT)
+print ("i am testing group")
 
 
 fars.run()
