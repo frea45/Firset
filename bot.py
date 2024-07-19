@@ -1,8 +1,4 @@
-form pyrogram import Client, __version__ , filters
-from pyrogram.raw.all import layerfilters
-import config
-from SCRIPT import script 
-import os
+form pyrogram import Client, filters 
 import logging 
 LOGGER = logging.getLoggor(__name__)
 logger.setLevel(logging.INFO)
@@ -13,19 +9,14 @@ api_id = 3335796,
 api_hash = "138b992a0e672e8346d8439c3f42ea78",
 bot_token = "5088657122:AAELk-O6R8rYxzqXNvWWRhtl2O0-FNLwHS0"
 
-fars = Client("test",
-api_id = api_id,
-api_hash = api_hash,
-bot_token = bot_token
-)
+fars = Client("test", api_id = api_id, api_hash = api_hash, bot_token = bot_token )
 
 
-#GROUP = "test"
-#WELCOME_MESSAGE = "Hello welcome"
+
 @fars.on_message(filters.command("start"))
   def welcome(client, message):
-message.reply_text(Config.IMDB_TEMPLATE_TXT)
-print ("i am testing group")
+
+print ("")
 
 
 fars.run()
